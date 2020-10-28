@@ -1,0 +1,19 @@
+" -----------------------------------------------------------------------------
+" Enable filetype detection, indent scripts, and filetype plugins
+filetype plugin on
+
+" Enable syntax coloring
+syntax on
+
+" Show position in file
+set ruler
+
+" Show tabs and trailing whitespace
+set list
+
+" These special characters need a locale with a UTF-8 LC_CTYPE
+" ·: U+00B7 / uft8 0xc2b7 / middle dot
+" »: U+00BB / uft8 0xc2bb / right-pointing double angle quotation mark
+set listchars=tab:»·,trail:·
+" Alternative for special fonts where the utf8 characters don't look right
+" set list listchars=tab:~-,trail:#

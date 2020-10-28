@@ -1,0 +1,38 @@
+#------------------------------------------------------------------------------
+# git command completion
+source ~/.git-completion.bash
+#------------------------------------------------------------------------------
+# git prompt
+source ~/.git-prompt.sh
+
+# Settings for __git_ps1
+# indicate unstaged (*) and staged (+) changes
+GIT_PS1_SHOWDIRTYSTATE="yes"
+
+# indicate stashed stuff ($)
+#GIT_PS1_SHOWSTASHSTATE="yes"
+
+# indicate untracked files (%)
+#GIT_PS1_SHOWUNTRACKEDFILES="yes"
+
+# auto: indicate behind (<), ahead (>), diverged (<>)
+# verbose: show number of commits ahead/behind
+GIT_PS1_SHOWUPSTREAM="auto verbose git"
+
+# branch: describe detached HEAD relative to newer branch/tag
+GIT_PS1_DESCRIBE_STYLE="branch"
+
+# add git status to bash prompt
+export PS1='\h:\W \u $(__git_ps1 "(%s)")\$ '
+#------------------------------------------------------------------------------
+# Ensure we use utf8 and not ASCII (for viewing utf8 text)
+
+# Do not keep code like this in rc file.
+if ! locale | grep "LC_CTYPE.*UTF"; then
+    if [ "$(uname)" = "Linux" ]; then
+        export LC_CTYPE=C.UTF-8
+    else
+        export LC_CTYPE=UTF-8
+    fi
+fi
+#------------------------------------------------------------------------------
