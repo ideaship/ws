@@ -1,0 +1,16 @@
+This directory contains configuration files for working with git.
+
+# Make sure UTF-8 characters are displayed correctly
+vimrc.git
+
+# Shell completion and simple git prompt for bash and zsh. Also show
+# tabs and trailing whitespace.
+bashrc.git
+zshrc.git
+git-prompt.sh [1]
+git-completion.bash [2]
+git-completion.zsh [3]
+
+[1] https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+[2] https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+[3] https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
